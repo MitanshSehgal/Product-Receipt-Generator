@@ -1,0 +1,60 @@
+import datetime
+store_name = "Super Market Z"
+store_street = "Noida, Uttar Pradesh"
+store_phone_number = "(+91)555-1234"
+cashier_name = "Vibhu Raj"
+now = datetime.datetime.now()
+date_time = now.strftime("%Y-%m-%d %H:%M:%S")
+#Let's create a list of the items you purchased and their prices. Let's make this receipt look great
+p1_name, p1_price = "sgm spaghetti sauce", 4.99
+p2_name, p2_price = "sgm spaghetti pasta", 1.99
+p3_name, p3_price = "mrchn inst lunch", 0.96
+p4_name, p4_price = "ee coffee french rst", 5.96
+p5_name, p5_price = "sgm evrdy pnt btr", 1.99
+p6_name, p6_price = "cub white bread", 1.99
+p7_name, p7_price = "par baked rustic rolls", 4.99
+p8_name, p8_price = "sgm creamy cream cheese", 1.99
+items_sold = 8
+#to build a  Receipt Generator
+sub_total = p1_price + p2_price + p3_price + p4_price + p5_price + p6_price + p7_price + p8_price
+food_tax = ( sub_total * 0.06)
+grand_total = sub_total + food_tax
+#Let's print the receipt
+return_message = "No returns on meat, product, milk products."
+appreciate_message  = "Thank you for your business !!"
+print("*" * 50 )
+print(f"\t\t\t\t{store_name.title()}")
+print(f"\t\t\t\t{store_street}")
+print(f"\t\t\t\t{store_phone_number}")
+print("=" * 50)
+
+#cashier name
+print(f"\t\t\t\tCashier: {cashier_name}")
+print(f"{date_time[0:10]}\t\t\t\t{date_time[10: ]}")
+print("=" * 50)
+#item name and price
+print("GROCERY")
+print("  ")
+print(f"{p1_name.upper()}\t\t\t\t\t\t{p1_price}")
+print(f"{p2_name.upper()}\t\t\t\t\t\t{p2_price}")
+print(f"{p3_name.upper()}\t\t\t\t\t\t{p3_price}")
+print(f"{p4_name.upper()}\t\t\t\t\t{p4_price}")
+print(f"{p5_name.upper()}\t\t\t\t\t\t{p5_price}")
+print(f"{p6_name.upper()}\t\t\t\t\t\t{p6_price}")
+print(f"{p7_name.upper()}\t\t\t\t\t\t{p7_price}")
+print(f"{p8_name.upper()}\t\t\t\t\t\t{p7_price}")
+print(" ")
+print("=" * 50)
+#subtotal
+print(f"Subtotal \t\t\t\t\t\t\t\t   ${sub_total:.2f}")
+print(f"Food Tax @ 6% \t\t\t\t\t\t\t\t   ${food_tax:.2f}")
+print(f"GRAND TOTAL  \t\t\t\t\t\t\t\t   ${grand_total:.2f}")
+print("=" * 50)
+#Total items
+print(" ") 
+print(f" TOTAL NUMBER OF ITEMS SOLD = \t\t\t\t\t   {items_sold}")
+print(" ")
+print(" ")
+#message
+print(f"\t{return_message}")
+print(f"\t\t\t{appreciate_message}")
